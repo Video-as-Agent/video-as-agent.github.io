@@ -1,3 +1,3 @@
-# llm_debate
+# video_agent demo website
 
-https://composable-models.github.io/llm_debate/
+https://video-as-agent.github.io/video_agent/
