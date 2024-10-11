@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="VideoAgent: Self-Improving Video Generation from Real-World Feedback">
+  <meta name="keywords" content="Video Generation, Reinforcement Learning, Robotics, Vision-Language Models, Video Refinement">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VideoAgent - Self-Improving Video Generation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./images/videoagent-logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- Title and Conference Info -->
+          <h1 class="title is-1 publication-title">
+            VideoAgent: Self-Improving Video Generation
+          </h1>
+          <h2 class="title is-2 conference-title">
+            Submitted to ICLR 2025
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-centered">
+      <video controls style="border: 2px solid gray; border-radius: 15px; box-shadow: 0px 0px 10px #999; padding: 5px; max-width: 100%;">
+        <source src="./videos/videoagent_summary.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Self-improving video plans via Vision-Language Model feedback for robotic manipulation and video generation tasks.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p style="font-size: 18px;">
+           Video generation has been used to generate visual plans for controlling robotic systems. Given an image observation and a language instruction, previous work has generated video plans which are then converted to robot controls to be executed. However, a major bottleneck in leveraging video generation for control lies in the quality of the generated videos, which often suffer from hallucinatory content and unrealistic physics, resulting in low task success when control actions are extracted from the generated videos. With this observation, we propose VideoAgent for self-improving generated video plans based on external feedback.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">System</h2>
+        <div class="content has-text-centered">
+          <img src="./images/videoagent_method.png" alt="Methods Figure" style="border: 2px solid gray; border-radius: 15px; box-shadow: 0px 0px 10px #999; padding: 5px; max-width: 100%;">
+          <p class="subtitle has-text-justified" style="margin-top: 10px; font-size: 16px; line-height: 1.5;">
+            <br><br><strong>VideoAgent</strong> iteratively refines generated video plans using feedback from a Vision-Language Model (VLM). After generating an initial video plan based on a language prompt, it queries the VLM for feedback, and refines the video plan before converting it into robot control actions. Successful execution in the real-world further improves the video generation model via online learning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Simulation Results</h3>
+        <div class="content">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="font-size: 0.85em;">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>AVDC Baseline</th>
+                <th style="background-color: #e0e0e0;">VideoAgent (Ours)</th>
+                <th>VideoAgent-Online</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Open Drawer</td>
+                <td>30.7%</td>
+                <td style="background-color: #e0e0e0;"><strong>46.7%</strong></td>
+                <td>52.0%</td>
+              </tr>
+              <tr>
+                <td>Close Drawer</td>
+                <td>28.0%</td>
+                <td style="background-color: #e0e0e0;"><strong>29.3%</strong></td>
+                <td>28.0%</td>
+              </tr>
+              <tr>
+                <td>Basketball</td>
+                <td>21.3%</td>
+                <td style="background-color: #e0e0e0;"><strong>18.7%</strong></td>
+                <td>21.3%</td>
+              </tr>
+              <!-- Add more rows for other tasks -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="./VideoAgent_ICLR_2025.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/user/repo" class="external-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>This website is based on the <a href="https://github.com/user/repo">VideoAgent</a> submission to ICLR 2025.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
