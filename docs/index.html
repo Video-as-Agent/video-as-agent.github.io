@@ -136,7 +136,7 @@
     <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
 
       <div class="columns is-centered">
-      <div class="column is-four-fifths">
+<!--       <div class="column is-four-fifths"> -->
         <h3 class="title is-4">Meta-World Results</h3>
         <div class="content">
           <p><strong>Meta-World Results.</strong> The mean success rates of baselines and VideoAgent on 11 simulated robot manipulation environments from Meta-World. VideoAgent consistently outperforms baselines across all tasks.</p>
@@ -199,7 +199,7 @@
                 <td style="background-color: #e0e0e0;"><strong>72.0%</strong></td>
               </tr>
               <tr>
-                <td>Button Press Top</td>
+                <td>Button Press Topdown</td>
                 <td>17.3%</td>
                 <td>24.0%</td>
                 <td>18.7%</td>
@@ -264,8 +264,51 @@
             </tbody>
           </table>
         </div>
+<!--       </div> -->
+    </div>
+    <div class="columns is-centered">
+    <div class="column is-four-fifths">
+      <h3 class="title is-4">iThor Success Rates</h3>
+      <div class="content">
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="font-size: 0.85em;">
+          <thead>
+            <tr>
+              <th>Room</th>
+              <th>AVDC Baseline</th>
+              <th style="background-color: #e0e0e0;">VideoAgent (Ours)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kitchen</td>
+              <td>26.7%</td>
+              <td style="background-color: #e0e0e0;"><strong>28.3%</strong></td>
+            </tr>
+            <tr>
+              <td>Living Room</td>
+              <td>23.3%</td>
+              <td style="background-color: #e0e0e0;"><strong>26.7%</strong></td>
+            </tr>
+            <tr>
+              <td>Bedroom</td>
+              <td>38.3%</td>
+              <td style="background-color: #e0e0e0;"><strong>41.7%</strong></td>
+            </tr>
+            <tr>
+              <td>Bathroom</td>
+              <td>36.7%</td>
+              <td style="background-color: #e0e0e0;"><strong>40.0%</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Overall</strong></td>
+              <td>31.3%</td>
+              <td style="background-color: #e0e0e0;"><strong>34.2%</strong></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+  </div>
 
   </div>
 </section>
