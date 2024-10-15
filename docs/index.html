@@ -135,44 +135,138 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
 
-    <div class="columns is-centered">
+      <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h3 class="title is-4">Simulation Results</h3>
+        <h3 class="title is-4">Meta-World Results</h3>
         <div class="content">
+          <p><strong>Meta-World Results.</strong> The mean success rates of baselines and VideoAgent on 11 simulated robot manipulation environments from Meta-World. VideoAgent consistently outperforms baselines across all tasks.</p>
           <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="font-size: 0.85em;">
             <thead>
               <tr>
                 <th>Task</th>
-                <th>AVDC Baseline</th>
-                <th style="background-color: #e0e0e0;">VideoAgent (Ours)</th>
-                <th>VideoAgent-Online</th>
+                <th>AVDC</th>
+                <th>AVDC-Replan</th>
+                <th>VideoAgent</th>
+                <th>VideoAgent-Online (Iter1)</th>
+                <th style="background-color: #e0e0e0;">VideoAgent-Online (Iter2)</th>
+                <th style="background-color: #e0e0e0;">VideoAgent-Online-Replan</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Open Drawer</td>
+                <td>Door Open</td>
                 <td>30.7%</td>
-                <td style="background-color: #e0e0e0;"><strong>46.7%</strong></td>
-                <td>52.0%</td>
+                <td>72.0%</td>
+                <td>40.0%</td>
+                <td>41.3%</td>
+                <td style="background-color: #e0e0e0;"><strong>44.0%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>80.0%</strong></td>
               </tr>
               <tr>
-                <td>Close Drawer</td>
+                <td>Door Close</td>
                 <td>28.0%</td>
+                <td>89.3%</td>
+                <td>29.3%</td>
+                <td>32.0%</td>
                 <td style="background-color: #e0e0e0;"><strong>29.3%</strong></td>
-                <td>28.0%</td>
+                <td style="background-color: #e0e0e0;"><strong>97.3%</strong></td>
               </tr>
               <tr>
                 <td>Basketball</td>
                 <td>21.3%</td>
+                <td>37.3%</td>
+                <td>13.3%</td>
+                <td>17.3%</td>
                 <td style="background-color: #e0e0e0;"><strong>18.7%</strong></td>
-                <td>21.3%</td>
+                <td style="background-color: #e0e0e0;"><strong>40.0%</strong></td>
               </tr>
-              <!-- Add more rows for other tasks -->
+              <tr>
+                <td>Shelf Place</td>
+                <td>8.0%</td>
+                <td>18.7%</td>
+                <td>9.3%</td>
+                <td>12.0%</td>
+                <td style="background-color: #e0e0e0;"><strong>18.7%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>22.7%</strong></td>
+              </tr>
+              <tr>
+                <td>Button Press</td>
+                <td>34.7%</td>
+                <td>60.0%</td>
+                <td>38.7%</td>
+                <td>45.3%</td>
+                <td style="background-color: #e0e0e0;"><strong>46.7%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>72.0%</strong></td>
+              </tr>
+              <tr>
+                <td>Button Press Top</td>
+                <td>17.3%</td>
+                <td>24.0%</td>
+                <td>18.7%</td>
+                <td>14.7%</td>
+                <td style="background-color: #e0e0e0;"><strong>16.0%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>40.0%</strong></td>
+              </tr>
+              <tr>
+                <td>Faucet Close</td>
+                <td>12.0%</td>
+                <td>53.3%</td>
+                <td>46.7%</td>
+                <td>38.7%</td>
+                <td style="background-color: #e0e0e0;"><strong>49.3%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>58.7%</strong></td>
+              </tr>
+              <tr>
+                <td>Faucet Open</td>
+                <td>17.3%</td>
+                <td>24.0%</td>
+                <td>12.0%</td>
+                <td>13.3%</td>
+                <td style="background-color: #e0e0e0;"><strong>21.3%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>36.0%</strong></td>
+              </tr>
+              <tr>
+                <td>Handle Press</td>
+                <td>41.3%</td>
+                <td>81.3%</td>
+                <td>36.0%</td>
+                <td>36.0%</td>
+                <td style="background-color: #e0e0e0;"><strong>44.0%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>85.3%</strong></td>
+              </tr>
+              <tr>
+                <td>Hammer</td>
+                <td>0.0%</td>
+                <td>8.0%</td>
+                <td>0.0%</td>
+                <td>0.0%</td>
+                <td style="background-color: #e0e0e0;"><strong>1.3%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>8.0%</strong></td>
+              </tr>
+              <tr>
+                <td>Assembly</td>
+                <td>5.3%</td>
+                <td>6.7%</td>
+                <td>1.3%</td>
+                <td>4.0%</td>
+                <td style="background-color: #e0e0e0;"><strong>1.3%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>10.7%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Overall</strong></td>
+                <td>19.6%</td>
+                <td>43.1%</td>
+                <td>22.3%</td>
+                <td>23.2%</td>
+                <td style="background-color: #e0e0e0;"><strong>26.4%</strong></td>
+                <td style="background-color: #e0e0e0;"><strong>50.0%</strong></td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
