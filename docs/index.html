@@ -136,7 +136,7 @@
     <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
 
       <div class="columns is-centered">
-<!--       <div class="column is-four-fifths"> -->
+      <div class="column is-four-fifths">
         <h3 class="title is-4">Meta-World Results</h3>
         <div class="content">
           <p><strong>Meta-World Results.</strong> The mean success rates of baselines and VideoAgent on 11 simulated robot manipulation environments from Meta-World. VideoAgent consistently outperforms baselines across all tasks.</p>
@@ -264,7 +264,7 @@
             </tbody>
           </table>
         </div>
-<!--       </div> -->
+      </div>
     </div>
     <div class="columns is-centered">
     <div class="column is-four-fifths">
@@ -303,6 +303,69 @@
               <td><strong>Overall</strong></td>
               <td>31.3%</td>
               <td style="background-color: #e0e0e0;"><strong>34.2%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-four-fifths">
+      <h3 class="title is-4">BridgeData-V2 Results</h3>
+      <div class="content">
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="font-size: 0.85em;">
+          <thead>
+            <tr>
+              <th>Metrics</th>
+              <th>AVDC</th>
+              <th style="background-color: #e0e0e0;">Video Agent (Ours)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background-color: #e0e0e0;">
+              <td>Clip Score</td>
+              <td>22.39</td>
+              <td><strong>22.90</strong></td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+              <td>Flow Consistency</td>
+              <td>2.48 ± 0.00</td>
+              <td><strong>2.59 ± 0.01</strong></td>
+            </tr>
+            <tr>
+              <td>Visual Quality</td>
+              <td>1.97 ± 0.003</td>
+              <td><strong>2.01 ± 0.003</strong></td>
+            </tr>
+            <tr>
+              <td>Temporal Consistency</td>
+              <td>1.48 ± 0.01</td>
+              <td><strong>1.55 ± 0.01</strong></td>
+            </tr>
+            <tr>
+              <td>Dynamic Degree</td>
+              <td><strong>3.08 ± 0.01</strong></td>
+              <td>3.07 ± 0.02</td>
+            </tr>
+            <tr>
+              <td>Text to Video Alignment</td>
+              <td>2.26 ± 0.003</td>
+              <td><strong>2.30 ± 0.03</strong></td>
+            </tr>
+            <tr>
+              <td>Factual Consistency</td>
+              <td>2.02 ± 0.004</td>
+              <td><strong>2.07 ± 0.01</strong></td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+              <td>Average Video Score</td>
+              <td>2.16 ± 0.01</td>
+              <td><strong>2.20 ± 0.01</strong></td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+              <td>Human Eval on Task Success</td>
+              <td>42.0%</td>
+              <td><strong>64.0%</strong></td>
             </tr>
           </tbody>
         </table>
