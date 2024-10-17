@@ -135,23 +135,19 @@
           <p style="font-size: 18px;">
           Video generation has been used to generate visual plans for controlling robotic
           systems. Given an image observation and a language instruction, previous work
-          has generated video plans which are then converted to robot controls to be ex-
-          ecuted. However, a major bottleneck in leveraging video generation for control
+          has generated video plans which are then converted to robot controls to be executed. However, a major bottleneck in leveraging video generation for control
           lies in the quality of the generated videos, which often suffer from hallucinatory
           content and unrealistic physics, resulting in low task success when control actions
           are extracted from the generated videos. While scaling up dataset and model size
-          provides a partial solution, integrating external feedback is both natural and es-
-          sential for grounding video generation in the real world. With this observation,
-          we propose VideoAgent for self-improving generated video plans based on exter-
-          nal feedback. Instead of directly executing the generated video plan, VideoAgent
+          provides a partial solution, integrating external feedback is both natural and essential for grounding video generation in the real world. With this observation,
+          we propose VideoAgent for self-improving generated video plans based on external feedback. Instead of directly executing the generated video plan, VideoAgent
           first refines the generated video plans using a novel procedure which we call self-
           conditioning consistency, utilizing feedback from a pretrained vision-language
           model (VLM). As the refined video plan is being executed, VideoAgent collects
           additional data from the environment to further improve video plan generation.
           Experiments in simulated robotic manipulation from MetaWorld and iTHOR show
           that VideoAgent drastically reduces hallucination, thereby boosting success rate
-          of downstream manipulation tasks. We further illustrate that VideoAgent can ef-
-          fectively refine real-robot videos, providing an early indicator that robotics can be
+          of downstream manipulation tasks. We further illustrate that VideoAgent can effectively refine real-robot videos, providing an early indicator that robotics can be
           an effective tool in grounding video generation in the physical world.         
           </p>
         </div>
