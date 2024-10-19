@@ -556,6 +556,7 @@
     groups.forEach(group => group.style.display = 'none');
     // Show the current group
     groups[index].style.display = 'flex';
+    groups[index].style.justifyContent = 'space-around';
     // Update the caption
     document.getElementById('carousel-caption').textContent = captions[index];
   }
