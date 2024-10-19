@@ -401,7 +401,6 @@
 
   </div>
 </section>
-<!--   
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
@@ -559,7 +558,8 @@
     groups[index].style.display = 'flex';
     groups[index].style.justifyContent = 'space-around';
     // Update the caption
-    document.getElementById('carousel-caption').textContent = captions[index];
+    const captionElement = document.getElementById('carousel-caption');
+    captionElement.textContent = captions[index];
   }
 
   // Show the first group by default
@@ -583,7 +583,8 @@
     }
     showGroup(currentGroupIndex);
   });
-</script> -->
+</script>
+
 
 <section class="section">
   <div class="container is-max-desktop">
