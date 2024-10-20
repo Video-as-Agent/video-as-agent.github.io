@@ -21,7 +21,7 @@
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <!-- <script src="./static/js/index.js"></script> -->
 
 </head>
 <body>
@@ -552,6 +552,7 @@
   let currentGroupIndex = 0;
 
   function showGroup(index) {
+    console.log(document.getElementById('left-button'));
     // Hide all groups
     groups.forEach(group => group.style.display = 'none');
     // Show the current group
@@ -560,14 +561,15 @@
     // Update the caption
     const captionElement = document.getElementById('carousel-caption');
     captionElement.textContent = captions[index];
+    console.log(document.getElementById('left-button'));
   }
-
+  console.log(document.getElementById('left-button'));
   // Show the first group by default
   showGroup(currentGroupIndex);
-
+  console.log(document.getElementById('left-button'));
   // Button Events
   document.getElementById('left-button').addEventListener('click', () => {
-    console.log('fjgfjf)
+    console.log('fjgfjf');
     if (currentGroupIndex > 0) {
       currentGroupIndex--;
     } else {
@@ -575,7 +577,7 @@
     }
     showGroup(currentGroupIndex);
   });
-
+  console.log(document.getElementById('left-button'));
   document.getElementById('right-button').addEventListener('click', () => {
     if (currentGroupIndex < groups.length - 1) {
       currentGroupIndex++;
