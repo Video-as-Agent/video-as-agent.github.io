@@ -25,58 +25,57 @@
 
   <!-- Custom CSS to fix the alignment and sizing issues -->
   <style>
+    /* Main Carousel Container */
     .carousel {
-      display: flex;
-      align-items: center; /* Align buttons and images vertically */
-      justify-content: center; /* Center the carousel content */
+    display: flex;
+    align-items: center; /* Vertically aligns the images and buttons */
+    justify-content: space-between; /* Ensures spacing between the left and right button */
+    position: relative; /* Allows absolute positioning for buttons */
+    width: 100%; /* Ensure it takes the full width of its parent */
     }
 
+    /* Container for Images */
     .carousel-images {
-      display: flex;
-      justify-content: space-around; /* Space between images */
-      width: 80%;
-      flex-wrap: wrap; /* Allow images to wrap if necessary */
+    display: flex;
+    justify-content: space-around; /* Distribute images evenly */
+    width: 80%; /* This ensures the images occupy the main portion of the carousel */
     }
 
-    .carousel-group {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-    }
-
-    .carousel-group > div {
-      flex: 1;
-      margin: 5px;
-      text-align: center;
-    }
-
+    /* Ensures all images are of the same size */
     .carousel-group img {
-      width: 100%; /* Ensure images take up the full width of their container */
-      max-width: 200px; /* Set a maximum width for consistency */
-      height: auto; /* Maintain aspect ratio */
-      border: 1px solid #ccc; /* Optional: Add a border around images */
-      border-radius: 5px; /* Optional: Add rounded corners to images */
+    width: 200px; /* Set a uniform width for images */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ccc; /* Optional: Add a border around images */
+    border-radius: 5px; /* Optional: Rounded corners */
     }
 
-    .carousel button {
-      height: 50px; /* Consistent button height */
-      margin: 0 10px; /* Add horizontal margin to buttons */
+    /* Style for both buttons */
+    button {
+    height: 50px; /* Set a consistent height for the buttons */
+    width: 50px; /* Set a consistent width for the buttons */
+    position: absolute; /* Absolute positioning within the carousel */
+    top: 50%; /* Vertically align the button in the middle of the carousel */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    z-index: 1; /* Ensure the buttons are clickable and above other elements */
     }
 
-    /* Adjust the button positions */
+    /* Position the left button */
     #left-button {
-      position: absolute;
-      left: 10px;
+    left: 0; /* Align the left button to the left edge */
+    margin-left: 10px; /* Optional: Add some margin on the left for spacing */
     }
 
+    /* Position the right button */
     #right-button {
-      position: absolute;
-      right: 10px;
+    right: 0; /* Align the right button to the right edge */
+    margin-right: 10px; /* Optional: Add some margin on the right for spacing */
     }
 
-    /* Ensure the carousel container has relative positioning */
-    #meta-world-carousel {
-      position: relative;
+    /* Optional Hover Effect for Buttons */
+    button:hover {
+    background-color: #e0e0e0; /* Changes background color on hover */
+    cursor: pointer; /* Change the cursor to a pointer */
+    border-radius: 50%; /* Optional: Give a round look to the button */
     }
   </style>
 
