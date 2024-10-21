@@ -23,6 +23,63 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <!-- <script src="./static/js/index.js"></script> -->
 
+  <!-- Custom CSS to fix the alignment and sizing issues -->
+  <style>
+    .carousel {
+      display: flex;
+      align-items: center; /* Align buttons and images vertically */
+      justify-content: center; /* Center the carousel content */
+    }
+
+    .carousel-images {
+      display: flex;
+      justify-content: space-around; /* Space between images */
+      width: 80%;
+      flex-wrap: wrap; /* Allow images to wrap if necessary */
+    }
+
+    .carousel-group {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .carousel-group > div {
+      flex: 1;
+      margin: 5px;
+      text-align: center;
+    }
+
+    .carousel-group img {
+      width: 100%; /* Ensure images take up the full width of their container */
+      max-width: 200px; /* Set a maximum width for consistency */
+      height: auto; /* Maintain aspect ratio */
+      border: 1px solid #ccc; /* Optional: Add a border around images */
+      border-radius: 5px; /* Optional: Add rounded corners to images */
+    }
+
+    .carousel button {
+      height: 50px; /* Consistent button height */
+      margin: 0 10px; /* Add horizontal margin to buttons */
+    }
+
+    /* Adjust the button positions */
+    #left-button {
+      position: absolute;
+      left: 10px;
+    }
+
+    #right-button {
+      position: absolute;
+      right: 10px;
+    }
+
+    /* Ensure the carousel container has relative positioning */
+    #meta-world-carousel {
+      position: relative;
+    }
+  </style>
+
 </head>
 <body>
 
